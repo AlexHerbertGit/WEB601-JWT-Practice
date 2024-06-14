@@ -41,5 +41,9 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
 
     if (response.ok) {
         alert('Login Successful')
+        //Save the token in MongoDB
+        window.location.href = '/profile' //Profile Page
+    } else {
+        alert('Login Failed')
     }
 });
